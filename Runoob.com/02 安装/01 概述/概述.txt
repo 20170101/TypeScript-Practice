@@ -1,0 +1,11 @@
+一、NPM 安装 TypeScript
+npm国内镜像的设置方法：
+npm config set registry https://registry.npm.taobao.org
+安装ts:
+npm install -g typescript
+查看版本号:
+tsc -v
+
+
+
+
