@@ -1,0 +1,14 @@
+一、cmd的方式
+执行以下命令将 TypeScript 转换为 JavaScript 代码：
+tsc app.ts
+使用 node 命令来执行 app.js 文件
+node app.js
+然后cmd上会输入hello world
+
+二、vscode的方式
+我们可以在左侧窗口中点击当前编辑的代码文件，选择 open in command prompt（在终端中打开），这时候我们就可以在屏幕的右侧下半部分使用 tsc 命令来执行 TypeScript 文件代码了
+
+三、我们可以同时编译多个 ts 文件：
+tsc file1.ts file2.ts file3.ts
+
+四、tsc --help可以查看tsc命令的参数及用法
