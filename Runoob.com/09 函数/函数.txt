@@ -1,0 +1,25 @@
+1.ts函数有返回值类型(但可选)：
+function function_name():return_type { 
+    // 语句
+    return value; 
+}
+
+2.在 TypeScript 函数里，如果我们定义了参数，则我们必须传入这些参数，除非将这些参数设置为可选，可选参数使用问号标识 ？
+function buildName(firstName: string, lastName?: string) {
+    if (lastName)
+        return firstName + " " + lastName;
+    else
+        return firstName;
+}
+可选参数必须跟在必需参数后面
+参数不能同时设置为可选和默认
+
+3.剩余参数语法允许我们将一个不确定数量的参数作为一个数组传入
+zqkang: 其实就是es6的rest parameter（zqkang:不定参数）
+function buildName(firstName: string, ...restOfName: string[]) {
+    return firstName + " " + restOfName.join(" ");
+}
+
+4.函数重载
+重载是方法名字相同，而参数不同，返回类型可以相同也可以不同。
+每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。
