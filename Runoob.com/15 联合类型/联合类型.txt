@@ -1,0 +1,16 @@
+1.联合类型（Union Types）可以通过管道(|)将变量设置多种类型，赋值时可以根据设置的类型来赋值。
+
+2.也可以将联合类型作为函数参数使用
+function disp(name:string|string[]) { 
+        if(typeof name == "string") { 
+                console.log(name) 
+        } else { 
+                var i; 
+                for(i = 0;i<name.length;i++) { 
+                console.log(name[i])
+                } 
+        } 
+}
+
+3.我们也可以将数组声明为联合类型
+var arr:number[]|string[]; 
