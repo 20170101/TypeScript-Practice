@@ -1,0 +1,15 @@
+1.接口是一系列抽象方法的声明，是一些方法特征的集合，这些方法都应该是抽象的，需要由具体的类去实现，然后第三方就可以通过这组抽象方法调用，
+让具体的类执行具体的方法。
+
+2.TypeScript 接口定义如下：
+interface interface_name { 
+}
+
+3.需要注意接口不能转换为 JavaScript。 它只是 TypeScript 的一部分。
+
+4.接口继承
+接口继承就是说接口可以通过其他接口来扩展自己。Typescript 允许接口继承多个接口。继承使用关键字 extends。
+单接口继承语法格式：
+Child_interface_name extends super_interface_name
+多接口继承语法格式：
+Child_interface_name extends super_interface1_name, super_interface2_name,…,super_interfaceN_name
