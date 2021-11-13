@@ -1,0 +1,2 @@
+1.TypeScript 类型模板
+2.鸭子类型(Duck Typing)
