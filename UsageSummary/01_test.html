@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>01 test</title>
+        <script>
+            "use strict";
+            let date=new Date(2021,10,01);
+            console.log(date.toString());
+        </script>
+    </head>
+    <body>
+        <p>See console.</p>
+        <p>
+            好吧，乌龙了，new Date(2021,10,01)这个问题不是ts的问题，而是js严格模式的问题。严格模式时传01会报错，非严格模式时不会报错。ts也是的，在
+            严格模式下报错，非严格模式下不报错，错误为：Uncaught SyntaxError: Octal literals are not allowed in strict mode
+        </p>
+    </body>
+</html>
