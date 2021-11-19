@@ -1,3 +1,5 @@
 zqkang:之所以要看这个人写的这份文档，有两个原因：
 1.ts官网只有英文，无多语言支持
 2.阮一峰老师给他的这个文档好评了
+
+http://ts.xcatliu.com/introduction/what-is-typescript.html
