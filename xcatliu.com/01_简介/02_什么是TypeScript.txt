@@ -1,0 +1,6 @@
+TypeScript的特性：
+1.类型系统
+2.静态类型
+3.弱类型
+
+https://github.com/typescript-eslint
