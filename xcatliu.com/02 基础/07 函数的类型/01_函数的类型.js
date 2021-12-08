@@ -23,47 +23,15 @@ var myS2;
 myS2 = function (source) {
     return true;
 };
-// console.log(myS2('aaa'));//zqkang：编译出错  error TS2554: Expected 2 arguments, but got 1.
-// let myS3: SearchFunc;
-// myS3 = function(source:number) {//zqkang: 与inerface相比类型不同且少一个参数，编译出错：error TS2322: Type '(source: number) => true' is not assignable to type 'SearchFunc'.
-//                 //Types of parameters 'source' and 'source' are incompatible.
-//                 //Type 'string' is not assignable to type 'number'.
-//     return true;
-// }
-// 与接口中的可选属性类似，我们用 ? 表示可选的参数：
-// function buildName(firstName:string, lastName?:string) {
-//     if(lastName){
-//         return firstName+' '+lastName;
-//     }else{
-//         return firstName;
-//     }
-// }
-// let tomcat=buildName('tom', 'cat');
-// let tom=buildName('tom');
-// console.log(tomcat);
-// console.log(tom);
-//需要注意的是，可选参数必须接在必需参数后面。换句话说，可选参数后面不允许再出现必需参数了：
-// function buildName(firstName?:string, lastName:string) {//编译出错： error TS1016: A required parameter cannot follow an optional parameter.
-//     if(firstName){
-//         return firstName+' '+lastName;
-//     }else{
-//         return lastName;
-//     }
-// }
-// TypeScript 会将添加了默认值的参数识别为可选参数：
-// function buildName(firstName:string, lastName: string='cat') {
-//     return firstName+' '+lastName;
-// }
-// let tomcat=buildName('tom', 'cat');
-// let tom=buildName('tom');
-// console.log(tomcat);
-// console.log(tom);
-// 此时就不受「可选参数必须接在必需参数后面」的限制了：
-function buildName(firstName, lastName) {
-    if (firstName === void 0) { firstName = 'tom'; }
-    return firstName + ' ' + lastName;
+function reverse(x) {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    }
+    else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
 }
-var tomcat = buildName('tom', 'cat');
-var tom = buildName(undefined, 'cat');
-console.log(tomcat);
-console.log(tom);
+console.log('number 123 reverse is: ' + reverse(123));
+console.log('string abc reverse is: ' + reverse('abc'));
+//上例中，我们重复定义了多次函数 reverse，前几次都是函数定义，最后一次是函数实现。在编辑器的代码提示中，可以正确的看到前两个提示。
+//注意，TypeScript 会优先从最前面的函数定义开始匹配，所以多个函数定义如果有包含关系，需要优先把精确的定义写在前面。
